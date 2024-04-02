@@ -1,56 +1,62 @@
-import { getNews } from "../database/load.js";
-
-(async function() {
+import callAjax from "../database/load.js";
+(async function () {
+    const URLLocal = "http://localhost:3000/news"
     const navElements = $('.nav-item.nav-link');
+    const newsElement = $('.news__section')
 
+    function placeholder(element) {
+        function addClassToChildren(element) {
+            $(element).find('*').addClass('placeholder');
+        }
+        addClassToChildren(element)
+    }
+
+    function complete(element) {
+        function removeClassToChildren(element) {
+            $(element).find('*').removeClass('placeholder');
+        }
+        removeClassToChildren(element)
+    }
     async function search(keyword) {
-        return await getNews({
+        return await callAjax(URLLocal, {
             "category_like": keyword,
             "_limit": "5"
+        }, function () {
+            newsElement.each((index, element) => {
+                placeholder(element);
+            });
+        }, function () {
+            newsElement.each((index, element) => {
+                complete(element);
+            });
         });
     }
 
-    async function render() {
-        const keyword = $(".nav-item.nav-link.active").text();
-        const newsData = await search(keyword);
-        const firstNews = newsData.shift(); // Remove the first news item from the array
-        await loadFirst(firstNews);
-        await loadRemain(newsData);
-    }
-
-    async function loadFirst(firstNews) {
-        const frameNewsFirst = $("#new-first");
-        const html = `<div class="whates-img">
-                            <img src="${firstNews.thumbnail}" alt="">
-                      </div>
-                      <div class="whates-caption">
-                          <h4><a href="${firstNews.source}">${firstNews.title}</a></h4>
-                          <span>by ${firstNews.author} - Jun 19, 2020</span>
-                          <p class="line-clamp line-2">${firstNews.shortDescription}</p>
-                      </div>`;
-        frameNewsFirst.html(html);
-    }
-
-    async function loadRemain(newsData) {
-        const frameNews = $(".news-data");
-        for (let index = 0; index < frameNews.length; index++) {
-            const { thumbnail, title } = newsData[index]; // Destructure properties
-            const html = `<div class="whats-right-img">
-                              <img src="${thumbnail}" alt="">
-                          </div>
-                          <div class="whats-right-cap">
-                              <span class="colorb">FASHION</span>
-                              <h4><a class="line-clamp line-1" href="latest_news.html">${title}</a></h4>
-                              <p>Jun 19, 2020</p>
-                          </div>`;
-            $(frameNews[index]).html(html);
+    function load(arrayNews) {
+        if (arrayNews.length >= newsElement.length) {
+            newsElement.each((index, element) => {
+                const { thumbnail, title, source, author, shortDescription } = arrayNews[index];
+                $(element).find('.news__thumbnail').attr('src', thumbnail);
+                $(element).find('.news__link').attr('href', source);
+                $(element).find('.news__title').text(title);
+                $(element).find('.news__author').text(author);
+                $(element).find('.news__desc').text(shortDescription);
+            });
         }
     }
 
-    function addEvent() {
-        render();
-        navElements.on('click', render);
+    function addEventNav() {
+        navElements.each((index, element) => {
+            $(element).on('click', (e) => {
+                render();
+            });
+        })
     }
-
-    addEvent();
+    async function render() {
+        const keyword = $(".nav-item.nav-link.active.show").text();
+        const newsData = await search(keyword);
+        load(newsData);
+    }
+    await render()
+    addEventNav();
 })();
