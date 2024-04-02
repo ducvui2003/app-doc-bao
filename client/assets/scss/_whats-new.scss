@@ -87,6 +87,10 @@
                 @media #{$xs}{
                     margin-bottom: 7px;
                }
+               width: 124px;
+               height: 104px;
+               object-fit: cover;
+               object-position: center;
             }
         }
         .whats-right-cap{

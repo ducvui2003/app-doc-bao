@@ -24,68 +24,66 @@
 /* 4. MainSlider-1 */
     // h1-hero-active
     function mainSlider() {
-      var BasicSlider = $('.slider-active');
-      BasicSlider.on('init', function (e, slick) {
+    var BasicSlider = $('.slider-active');
+    BasicSlider.on('init', function (e, slick) {
         var $firstAnimatingElements = $('.single-slider:first-child').find('[data-animation]');
         doAnimations($firstAnimatingElements);
-      });
-      BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
+    });
+    BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
         var $animatingElements = $('.single-slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
         doAnimations($animatingElements);
-      });
-      BasicSlider.slick({
+    });
+    BasicSlider.slick({
         autoplay: true,
         autoplaySpeed: 3500,
         dots: false,
         fade: true,
-        arrows: false, 
+        arrows: false,
         prevArrow: '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
         nextArrow: '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
         responsive: [{
             breakpoint: 1024,
             settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
             }
-          },
-          {
+        },
+        {
             breakpoint: 991,
             settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows: false
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
             }
-          },
-          {
+        },
+        {
             breakpoint: 767,
             settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows: false
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
             }
-          }
+        }
         ]
-      });
+    });
 
-      function doAnimations(elements) {
+    function doAnimations(elements) {
         var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
         elements.each(function () {
-          var $this = $(this);
-          var $animationDelay = $this.data('delay');
-          var $animationType = 'animated ' + $this.data('animation');
-          $this.css({
-            'animation-delay': $animationDelay,
-            '-webkit-animation-delay': $animationDelay
-          });
-          $this.addClass($animationType).one(animationEndEvents, function () {
-            $this.removeClass($animationType);
-          });
+            var $this = $(this);
+            var $animationDelay = $this.data('delay');
+            var $animationType = 'animated ' + $this.data('animation');
+            $this.css({
+                'animation-delay': $animationDelay,
+                '-webkit-animation-delay': $animationDelay
+            });
+            $this.addClass($animationType).one(animationEndEvents, function () {
+                $this.removeClass($animationType);
+            });
         });
-      }
     }
-    mainSlider();
-
+}
 
 
     // Weekly-2 Acticve
@@ -225,51 +223,6 @@
         ]
     });
 
-/* 5. Video area Active */
-    $('.video-items-active').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      asNavFor:'.testmonial-nav'
-    });
-      $('.testmonial-nav').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        asNavFor: '.video-items-active',
-        dots: false,
-        arrows:false,
-        prevArrow: '<button type="button" class="slick-prev"><span class="ti-arrow-left"></<span></button>',
-        nextArrow: '<button type="button" class="slick-next"><span class="ti-arrow-right"></span></button>',
-        centerMode: true,
-        focusOnSelect: true,
-        centerPadding:0,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              infinite: true,
-              dots: false,
-            }
-          },
-          {
-            breakpoint: 991,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      }
-    );
 
 
 /* 5. Gallery Active */
@@ -389,7 +342,7 @@
   $('.sticky-logo').addClass('info-open');
 
 
-// Remove clas
+// Remove class
   $('.close-icon').click(function(){
     $('.extra-inofo-bar').removeClass('info-open');
   })

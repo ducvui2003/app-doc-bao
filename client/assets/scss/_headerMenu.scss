@@ -268,16 +268,6 @@
     .nav-search {
         display: inline-block;
         position: relative;
-        &::before{
-            content: "";
-            width: 1px;
-            height: 104%;
-            background: #ff889a;
-            position: absolute;
-            right: 0px;
-            top: -1px;
-            bottom: 0;
-        }
         i {
             color: #fff;
             font-size: 16px;
