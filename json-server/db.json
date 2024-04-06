@@ -6,7 +6,7 @@
       "title": "HLV Troussier 'được hỗ trợ hơn 3 tháng lương'",
       "shortDescription": "HÀ NỘI - Liên đoàn Bóng đá Việt Nam trả một khoản phí hỗ trợ tìm việc, sau khi đồng thuận chia tay HLV Phillippe Troussier trong cuộc họp hơn một tiếng rưỡi tối qua.",
       "thumbnail": "https://i1-thethao.vnecdn.net/2024/03/27/z5287520988053-bc3ae8952b8c10c-2384-4053-1711512530.jpg?w=680&h=408&q=100&dpr=2&fit=crop&s=bcStzrDrAuJPU4mWZGoy8g",
-      "publishTime": "27/03/2024",
+      "createAt": "27/03/2024",
       "content": "HÀ NỘI - Liên đoàn Bóng đá Việt Nam trả một khoản phí hỗ trợ tìm việc, sau khi đồng thuận chia tay HLV Phillippe Troussier trong cuộc họp hơn một tiếng rưỡi tối qua. Theo kế hoạch, một ngày sau trận đấu với Indonesia ở lượt bốn vòng loại World Cup 2026, VFF và HLV Troussier mới ngồi lại để đánh giá về các vấn đề chuyên môn. Nhưng ngay sau trận đấu trên sân Mỹ Đình, VFF đã triệu tập cuộc họp khẩn tại trụ sở trên đường Lê Quang Đạo (Nam Từ Liêm), nằm đối diện sân Mỹ Đình. Thành phần tham dự gồm nhóm lãnh đạo VFF cùng HLV Troussier, bắt đầu từ gần 22h đến 23h30. Vấn đề được đặt ra xoay quanh tương lai của nhà cầm quân người Pháp.",
       "source": "https://vnexpress.net/hlv-troussier-duoc-ho-tro-hon-3-thang-luong-4727157.html",
       "category": [
@@ -66,20 +66,6 @@
       "createAt": "2024-03-13T20:34:08Z",
       "content": "19\r\nA US federal jury has convicted a dual Russian-Swedish national, Roman Sterlingov, for operating Bitcoin Fog, \"the longest-running bitcoin money laundering service on the darknet,\" the Department… [+5682 chars]",
       "id": "TTmzpjT",
-      "category": [
-        "Bitcoin"
-      ],
-      "viewCount": 0
-    },
-    {
-      "author": "Matt Novak",
-      "title": "The Feds Are Reportedly Investigating Ethereum Foundation",
-      "shortDescription": "The U.S. Securities and Exchange Commission (SEC) is investigating the Ethereum Foundation and companies doing business with the nonprofit, according to a new report from Fortune Wednesday. And that’s very bad news for crypto enthusiasts who were hopeful that…",
-      "source": "https://gizmodo.com/sec-ethereum-price-bitcoin-investigation-crypto-etf-1851352576",
-      "thumbnail": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b5adaa02e058acea54ab69fa505844cc.jpg",
-      "createAt": "2024-03-20T18:15:00Z",
-      "content": "The U.S. Securities and Exchange Commission (SEC) is investigating the Ethereum Foundation and companies doing business with the nonprofit, according to a new report from Fortune Wednesday. And thats… [+2397 chars]",
-      "id": "7M4Qvqn",
       "category": [
         "Bitcoin"
       ],
@@ -223,19 +209,6 @@
         "travel"
       ],
       "id": "LHtAcfn"
-    },
-    {
-      "author": "Aarian Marshall",
-      "title": "Don't Let the Headlines Fool You. Air Travel Is Really Very Safe",
-      "shortDescription": "Despite a flood of bad news about mechanical mishaps on commercial airliners, data from regulators shows that jumbo jets aren’t all suddenly falling apart.",
-      "source": "https://www.wired.com/story/dont-let-the-boeing-headlines-fool-you-air-travel-is-really-very-safe/",
-      "thumbnail": "https://media.wired.com/photos/65f48927548107766641ed4f/191:100/w_1280,c_limit/Boeing-Problems-Gear-GettyImages-1223465937.jpg",
-      "createAt": "2024-03-15T21:58:08Z",
-      "content": "What the hell is going on up there in the sky?\r\nThe incidents feel like they started in January, when a door plug blew out of a midair Boeing 737 MAX 9 aircraft operated by Alaska Airlines. No one wa… [+2776 chars]",
-      "category": [
-        "travel"
-      ],
-      "id": "-ZvQK4S"
     },
     {
       "author": "https://www.facebook.com/bbcnews",
@@ -498,19 +471,6 @@
       "id": "mzH8r14"
     },
     {
-      "author": "Kenneth P. Pucker",
-      "title": "The Lingering Cost of Instant Fashion",
-      "shortDescription": "Instant fashion has exploded in recent years, led by Shein whose sales have multiplied by more than 20 times since it entered the U.S. less than six years ago. As Shein explores an IPO, the author reviews the social phenomena that have contributed to instant …",
-      "source": "https://hbr.org/2024/02/the-lingering-cost-of-instant-fashion",
-      "thumbnail": "https://hbr.org/resources/images/article_assets/2024/02/Feb24_21_1400652419.jpg",
-      "createAt": "2024-02-27T21:00:00Z",
-      "content": "Instant fashion has exploded in recent years, led by Shein whose sales have multiplied by more than 20 times since it entered the U.S. less than six years ago. As Shein explores an IPO, the author re… [+409 chars]",
-      "category": [
-        "fashion"
-      ],
-      "id": "-PSFuxh"
-    },
-    {
       "author": null,
       "title": "[Removed]",
       "shortDescription": "[Removed]",
@@ -769,19 +729,6 @@
         "technology"
       ],
       "id": "ZCnzCNv"
-    },
-    {
-      "author": "Barbara Krasnoff",
-      "title": "What’s on your desk, Joanna Nelius?",
-      "shortDescription": "The Verge’s new laptop reviewer discusses her use of today’s technology, her fondness for yesterday’s, and how her family’s past has influenced her present.",
-      "source": "https://www.theverge.com/24106808/desk-tech-lenovo-typewriter",
-      "thumbnail": "https://cdn.vox-cdn.com/thumbor/zsCVcu-mxHR-A1iFuByPby5dm90=/0x0:2700x1800/1200x628/filters:focal(1350x900:1351x901)/cdn.vox-cdn.com/uploads/chorus_asset/file/25346847/247056_WOYD_Joanna_Nelius_JNelius_0001.jpg",
-      "createAt": "2024-03-22T14:45:14Z",
-      "content": "Sometimes, our family’s past can inform our present — and our future. Joanna Nelius is a recent addition to The Verge’s staff, having joined us a little over a month ago to become our new laptop revi… [+12311 chars]",
-      "category": [
-        "technology"
-      ],
-      "id": "28lZzG3"
     },
     {
       "author": "Isaac Schultz",
