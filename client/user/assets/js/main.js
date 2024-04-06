@@ -86,53 +86,7 @@
 }
 
 
-    // Weekly-2 Acticve
-      $('.weekly2-news-active').slick({
-          dots:false,
-          infinite: true,
-          speed: 500,
-          arrows: true,
-          autoplay:true,
-          loop:true,
-          slidesToShow: 3,
-          prevArrow:'<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
-          nextArrow:'<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
-          slidesToScroll: 1,
-          responsive: [
-            {
-            breakpoint: 1200,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: false,
-            }
-            },
-            {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-            },
-            {
-            breakpoint: 700,
-            settings: {
-              arrows: false,
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-            },
-            {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-            }
-          ]
-          });
+
           
 
     // Weekly-2 Acticve
@@ -319,11 +273,11 @@
 
 /* 11. Datepicker */
     
-// 11. ---- Mailchimp js --------//  
-    function mailChimp() {
-      $('#mc_embed_signup').find('form').ajaxChimp();
-    }
-    mailChimp();
+// // 11. ---- Mailchimp js --------//  
+//     function mailChimp() {
+//       $('#mc_embed_signup').find('form').ajaxChimp();
+//     }
+//     mailChimp();
 
 
 // 12 Pop Up Img

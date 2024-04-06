@@ -1,4 +1,5 @@
 import callAjax from "../database/load.js";
+import getLinkNewsDetail from "../detail/href.js";
 (async function () {
     const URLLocal = "http://localhost:3000/news"
     const navElements = $('.nav-item.nav-link');
@@ -35,9 +36,10 @@ import callAjax from "../database/load.js";
     function load(arrayNews) {
         if (arrayNews.length >= newsElement.length) {
             newsElement.each((index, element) => {
-                const { thumbnail, title, source, author, shortDescription } = arrayNews[index];
+                console.log(element);
+                const {id, thumbnail, title, source, author, shortDescription } = arrayNews[index];
                 $(element).find('.news__thumbnail').attr('src', thumbnail);
-                $(element).find('.news__link').attr('href', source);
+                $(element).find('.news__link').attr('href', getLinkNewsDetail(id));
                 $(element).find('.news__title').text(title);
                 $(element).find('.news__author').text(author);
                 $(element).find('.news__desc').text(shortDescription);
