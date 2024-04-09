@@ -129,17 +129,31 @@ $(document).ready(function () {
             events: {
                 'contentChanged': function () {
                     editorContent = editor.html.get();
-                    console.log('Content changed', editorContent);
                 }
             }
         });
-     // select 2
         const selectCategory = `${formSelector} .select__category`;
-        $(selectCategory).select2({
-            placeholder: "Select a category",
-            allowClear: true
-        });
-    }
+        $.ajax({
+            url: "http://localhost:3000/categories",
+            type: "GET",
+            success: function (data) {
+                const selectOptions = data.map(item => ({
+                    value: item,
+                    text: item
+                }));
+                $(selectCategory).selectize({
+                    plugins: ["restore_on_backspace", "clear_button"],
+                    delimiter: " - ",
+                    persist: false,
+                    maxItems: null,
+                    options: selectOptions,
+                    valueField: 'value',
+                    labelField: 'text',
+                    searchField: 'text'
+                });
+            }
+        })
+
         // Apply validate form
         $(formSelector).validate({
             rules: {
@@ -155,6 +169,9 @@ $(document).ready(function () {
                 source: {
                     required: true,
                     urlCheck: true
+                },
+                "category[]": {
+                    required: true,
                 },
                 shortDescription: {
                     required: true,
@@ -182,6 +199,9 @@ $(document).ready(function () {
                 source: {
                     required: "Source is required",
                     urlCheck: "Please enter a valid URL"
+                },
+                'category[]': {
+                    required: "Please select at least one category"
                 },
                 shortDescription: {
                     required: "Short description is required",
@@ -212,29 +232,44 @@ $(document).ready(function () {
             submitHandler: function (form) {
                 // Submit form via AJAX
                 var formData = new FormData(form);
-                console.log("ajax", formData);
+
+                var jsonData = {};
+                formData.forEach(function (value, key) {
+                    jsonData[key] = value;
+                });
+                jsonData.createdAt = new Date().toISOString()
+                console.log(jsonData);
                 $.ajax({
-                    url: "",
+                    url: "http://localhost:3000/news",
                     type: "POST",
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    xhr: function () {
-
-                        return xhr;
-                    },
+                    data: JSON.stringify(jsonData),
+                    contentType: "application/json",
                     success: function (response) {
-                        // Handle success response
-
+                        console.log(response);
+                        Swal.fire({
+                            title: "Success!",
+                            text: "News has been added successfully!",
+                            icon: "success"
+                        });
                     },
                     error: function (xhr, status, error) {
-                        // Handle error response
-                        console.error("Upload error:", error);
+                        Swal.fire({
+                            title: "Failed!",
+                            text: "Something went wrong!",
+                            icon: "error",
+                            confirmButtonText: 'OK'
+                        }).then((result) => {
+                            // Check if the "OK" button is clicked
+                            if (result.isConfirmed) {
+                                // Close the modal
+                                Swal.close();
+                                modalUpdate.hide();
+                            }
+                        });
                     }
                 });
-                return false; // Prevent form submission
+                return false;
             }
         });
-
-   
+    }
 });
