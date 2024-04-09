@@ -11,8 +11,7 @@
         content="" />
     <meta name="author"
         content="" />
-    <link href="css/styles.css"
-        rel="stylesheet" />
+
     <!-- Font awesome -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
         crossorigin="anonymous"></script>
@@ -31,7 +30,6 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
         integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
         crossorigin="anonymous"></script>
-
     <!-- Data table -->
     <link href="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-2.0.3/b-3.0.1/date-1.5.2/datatables.min.css"
         rel="stylesheet">
@@ -44,8 +42,9 @@
         type='text/css' />
     <script type='text/javascript'
         src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'></script>
-
-    <script src="js/scripts.js"></script>
+    <!-- <script src="js/scripts.js"></script> -->
+    <link href="css/styles.css"
+        rel="stylesheet" />
 
     <title>News</title>
     <style>
@@ -189,34 +188,15 @@
                         <div class="col-md-12">
                             <label for=""
                                 class="form-label">Category</label>
-                            <select class="form-select select2"
-                                data-placeholder="Choose anything"
-                                name="category[]"
+                            <select class="form-select select__category"
+                                name="category"
                                 multiple>
-                                <option>Christmas Island</option>
-                                <option>South Sudan</option>
-                                <option>Jamaica</option>
-                                <option>Kenya</option>
-                                <option>French Guiana</option>
-                                <option>Mayotta</option>
-                                <option>Liechtenstein</option>
-                                <option>Denmark</option>
-                                <option>Eritrea</option>
-                                <option>Gibraltar</option>
-                                <option>Saint Helena, Ascension and Tristan da Cunha</option>
-                                <option>Haiti</option>
-                                <option>Namibia</option>
-                                <option>South Georgia and the South Sandwich Islands</option>
-                                <option>Vietnam</option>
-                                <option>Yemen</option>
-                                <option>Philippines</option>
-                                <option>Benin</option>
-                                <option>Czech Republic</option>
-                                <option>Russia</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
                             </select>
-                            <div class="valid-feedback">
+                            <!-- <div class="valid-feedback">
 
-                            </div>
+                            </div> -->
                         </div>
                         <div class="col-12">
                             <label for=""
@@ -272,7 +252,8 @@
                         data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
-                <form class="modal-body">
+                <form id="form__edit"
+                    class="modal-body ">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label for=""
@@ -304,38 +285,22 @@
                                 name="thumbnail">
                         </div>
                         <div class="col-md-12">
-                            <label for=""
-                                class="form-label">Category</label>
-                            <select class="form-select"
-                                data-placeholder="Choose anything"
-                                name="category[]"
-                                multiple>
-                                <option>Christmas Island</option>
-                                <option>South Sudan</option>
-                                <option>Jamaica</option>
-                                <option>Kenya</option>
-                                <option>French Guiana</option>
-                                <option>Mayotta</option>
-                                <option>Liechtenstein</option>
-                                <option>Denmark</option>
-                                <option>Eritrea</option>
-                                <option>Gibraltar</option>
-                                <option>Saint Helena, Ascension and Tristan da Cunha</option>
-                                <option>Haiti</option>
-                                <option>Namibia</option>
-                                <option>South Georgia and the South Sandwich Islands</option>
-                                <option>Vietnam</option>
-                                <option>Yemen</option>
-                                <option>Philippines</option>
-                                <option>Benin</option>
-                                <option>Czech Republic</option>
-                                <option>Russia</option>
-                            </select>
+                            <!-- <div class="input-group mb-3">
+                                <select class="form-select select__category"
+                                    id="inputGroupSelect02">
+                                    <option selected>Choose...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <label class="input-group-text"
+                                    for="inputGroupSelect02">Options</label>
+                            </div> -->
                         </div>
                         <div class="col-12">
                             <label for=""
                                 class="form-label">Short description</label>
-                            <textarea class="form-control"
+                            <textarea class="form-control "
                                 name="shortDescription"
                                 rows="3"></textarea>
                         </div>
@@ -345,6 +310,7 @@
                                 class="form-label">
                             </label>
                             <textarea name="content"
+                                class="content"
                                 cols="30"
                                 rows="10"></textarea>
                         </div>
@@ -393,19 +359,19 @@
             </div>
         </div>
     </div>
-    <!-- Select 2 -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-5-theme/1.3.0/select2-bootstrap-5-theme.min.css"
-        integrity="sha512-z/90a5SWiu4MWVelb5+ny7sAayYUfMmdXKEAbpj27PfdkamNdyI3hcjxPxkOPbrXoKIm7r9V2mElt5f1OtVhqA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
-        rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- Validator -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
         integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
+    <!-- Select 2 -->
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
+
     <script src="js/datatables-simple-demo.js"></script>
 </body>
 

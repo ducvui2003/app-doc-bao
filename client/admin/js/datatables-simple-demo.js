@@ -49,6 +49,8 @@ $(document).ready(function () {
             modalCreate();
             modalDelete();
             modalUpdate();
+            setupForm("#form__add");
+            setupForm("#form__edit");
         }
     });
     // save id want to delete
@@ -84,8 +86,6 @@ $(document).ready(function () {
                 }
             });
         });
-
-        setupForm("#form__add")
     }
 
     function modalUpdate() {
@@ -133,7 +133,13 @@ $(document).ready(function () {
                 }
             }
         });
-
+     // select 2
+        const selectCategory = `${formSelector} .select__category`;
+        $(selectCategory).select2({
+            placeholder: "Select a category",
+            allowClear: true
+        });
+    }
         // Apply validate form
         $(formSelector).validate({
             rules: {
@@ -229,15 +235,6 @@ $(document).ready(function () {
                 return false; // Prevent form submission
             }
         });
-        
-        // select 2
-        $(formSelector).find('.select2').select2({
-            theme: "bootstrap-5",
-            width: '100%',
-            placeholder: $(this).data('placeholder'),
-            dropdownParent: $('#select2').parent(),
-            closeOnSelect: false,
-            allowClear: true,
-        });
-    }
+
+   
 });
