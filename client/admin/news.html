@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description"
+        content="" />
+    <meta name="author"
+        content="" />
+
+    <!-- Font awesome -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- JQuery 3 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+        crossorigin="anonymous"></script>
+    <!-- Data table -->
+    <link href="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-2.0.3/b-3.0.1/date-1.5.2/datatables.min.css"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-2.0.3/b-3.0.1/date-1.5.2/datatables.min.js"></script>
+    <!-- Froala -->
+    <link href='https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css'
+        rel='stylesheet'
+        type='text/css' />
+    <script type='text/javascript'
+        src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'></script>
+    <!-- <script src="js/scripts.js"></script> -->
+    <link href="css/styles.css"
+        rel="stylesheet" />
+
+    <title>News</title>
+    <style>
+        .ellipsis {
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body class="sb-nav-fixed">
+    <header id="header"></header>
+    <script>
+        $("#header").load("layout/header.html #header__import");
+    </script>
+    <div id="layoutSidenav">
+        <div id="sidebar"></div>
+        <script>
+            $("#sidebar").load("layout/sidebar.html  #layoutSidenav_nav");
+        </script>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <form id="form__upload"
+                        action="#">
+                        <input type="file">
+                        <button type="submit">submit</button>
+                    </form>
+                    <h1 class="mt-4">News</h1>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <ol class="breadcrumb ">
+                            <li class="breadcrumb-item ">News datatable</li>
+                        </ol>
+                        <button class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modal__create">Create news</button>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-table me-1"></i>
+                            News
+                        </div>
+                        <div class="card-body">
+                            <table id="data"
+                                class="table table-border table-hover table-striped w-100">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Author</th>
+                                        <th>Date publish</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Author</th>
+                                        <th>Title</th>
+                                        <th>Date publish</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer id="footer"></footer>
+            <script>
+                $("#footer").load("layout/footer.html #footer__import");
+            </script>
+        </div>
+    </div>
+
+    <!-- Modal create -->
+    <div class="modal fade"
+        id="modal__create"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable "
+            style="max-width: 75%;">
+            <form class="modal-content"
+                id="form__add">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5"
+                        id="staticBackdropLabel">Create news</h1>
+                    <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for=""
+                                class="form-label">Author</label>
+                            <input type="text"
+                                class="form-control"
+                                name="author">
+                            <div class="valid-feedback">
+
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <label for=""
+                                class="form-label">Title</label>
+                            <input type="text"
+                                class="form-control"
+                                name="title">
+                            <div class="valid-feedback">
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <label for=""
+                                class="form-label">Source</label>
+                            <input type="text"
+                                class="form-control"
+                                name="source"
+                                autocomplete="off">
+                            <div class="valid-feedback">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for=""
+                                class="form-label">Thumbnail</label>
+                            <input type="text"
+                                class="form-control"
+                                name="thumbnail"
+                                autocomplete="off">
+                            <div class="valid-feedback">
+
+                            </div>
+                        </div>
+                        <div class="col col-12">
+                        </div>
+                        <div class="col-md-12">
+                            <label for=""
+                                class="form-label">Category</label>
+                            <select class=" select__category"
+                                name="category[]"
+                                multiple>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+                            <div class="valid-feedback">
+
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for=""
+                                class="form-label">Short description</label>
+                            <textarea class="form-control"
+                                name="shortDescription"
+                                rows="3"></textarea>
+                            <div class="valid-feedback">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for=""
+                                class="form-label">Content
+                            </label>
+                            <textarea name="content"
+                                class="content"
+                                cols="30"
+                                rows="10"></textarea>
+                            <div class="valid-feedback">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button>
+                    <button type="submit"
+                        class="btn btn-primary btn__modal-delete">Save change</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal edit -->
+    <div class="modal fade"
+        id="modal__edit"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable "
+            style="max-width: 75%;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5"
+                        id="staticBackdropLabel">Edit news</h1>
+                    <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <form id="form__edit"
+                    class="modal-body ">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for=""
+                                class="form-label">Author</label>
+                            <input type="text"
+                                class="form-control"
+                                name="author">
+                        </div>
+
+                        <div class="col-6">
+                            <label for=""
+                                class="form-label">Title</label>
+                            <input type="text"
+                                class="form-control"
+                                name="title">
+                        </div>
+                        <div class="col-6">
+                            <label for=""
+                                class="form-label">Source</label>
+                            <input type="text"
+                                class="form-control"
+                                name="source">
+                        </div>
+                        <div class="col-md-6">
+                            <label for=""
+                                class="form-label">Thumbnail</label>
+                            <input type="text"
+                                class="form-control"
+                                name="thumbnail">
+                        </div>
+                        <div class="col-md-12">
+                            <!-- <div class="input-group mb-3">
+                                <select class="form-select select__category"
+                                    id="inputGroupSelect02">
+                                    <option selected>Choose...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <label class="input-group-text"
+                                    for="inputGroupSelect02">Options</label>
+                            </div> -->
+                        </div>
+                        <div class="col-12">
+                            <label for=""
+                                class="form-label">Short description</label>
+                            <textarea class="form-control "
+                                name="shortDescription"
+                                rows="3"></textarea>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for=""
+                                class="form-label">
+                            </label>
+                            <textarea name="content"
+                                class="content"
+                                cols="30"
+                                rows="10"></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button>
+                    <button type="button"
+                        class="btn btn-primary btn__modal-delete">Save change</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal delele -->
+    <div class="modal fade"
+        id="modal__delete"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5"
+                            id="exampleModalLabel">Modal title</h1>
+                        <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Do you want delete this news?</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button"
+                            class="btn btn-danger btn__modal-delete ">Delete</button>
+                        <button type="button"
+                            class="btn btn-secondary "
+                            id="btn__cancel"
+                            data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <!-- Validator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+        integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <!-- selectize -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+        integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+        integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script src="js/scripts.js"></script>
+    <!-- Sweet aleart -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="module"
+        src="js/datatables-simple-demo.js"></script>
+
+</body>
+
+</html>
