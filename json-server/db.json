@@ -807,6 +807,17 @@
         "technology"
       ],
       "id": "V74deuQ"
+    },
+    {
+      "author": "The newyour",
+      "title": "Iran Smuggles Arms to West Bank, Officials Say, to Foment Unrest With Israel",
+      "source": "https://www.nytimes.com/2024/04/09/world/middleeast/iran-west-bank-weapons-smuggling.html",
+      "thumbnail": "https://static01.nyt.com/images/2024/03/26/multimedia/29iran-westbank-top/26mideast-crisis-syria-strikes-chmg-superJumbo.jpg",
+      "category[]": "sport",
+      "shortDescription": "The covert operation, described by U.S., Iranian and Israeli officials, is heightening concerns that Iran is seeking to turn the West Bank into a flashpoint in its shadow war with Israel.",
+      "content": "<div style='margin: 0px; padding: 0px; border: 0px; text-size-adjust: 100%; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-alternates: inherit; font-variant-position: inherit; font-weight: 400; font-stretch: inherit; font-size: 16px; line-height: inherit; font-family: \"Times New Roman\"; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; vertical-align: baseline; color: rgb(51, 51, 51); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;' id=\"isPasted\"><h1 data-testid=\"headline\" style='margin: 0px auto 0.5rem; padding: 0px; border: 0px; text-size-adjust: 100%; font-style: italic; font-variant: inherit; font-weight: 700; font-stretch: inherit; font-size: 2.5rem; line-height: 2.875rem; font-family: nyt-cheltenham, georgia, \"times new roman\", times, serif; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; vertical-align: baseline; color: var(--color-content-primary,#121212); text-align: left; width: 600px; max-width: none; position: relative;'>Iran Smuggles Arms to West Bank, Officials Say, to Foment Unrest With Israel</h1></div>",
+      "createdAt": "2024-04-09T15:57:28.228Z",
+      "id": "BfZZb13"
     }
   ],
   "users": [
@@ -830,5 +841,11 @@
       "dateCreate": "",
       "content:": ""
     }
+  ],
+  "categories": [
+    "lifestyle",
+    "fashion",
+    "sport",
+    "technology"
   ]
 }

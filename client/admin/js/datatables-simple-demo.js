@@ -1,3 +1,4 @@
+import uploadImage from "./uploadImage.js";
 $(document).ready(function () {
     const URL = "http://localhost:3000/news";
     function formatDate(dateString) {
@@ -272,4 +273,37 @@ $(document).ready(function () {
             }
         });
     }
+    const configFroala = {
+        imageUploadParam: 'image_param',
+
+        // Set the image upload URL.
+        imageUploadURL: '/',
+
+        // Additional upload params.
+        imageUploadParams: { id: 'my_editor' },
+
+        // Set request type.
+        imageUploadMethod: 'POST',
+
+        // Set max image size to 5MB.
+        imageMaxSize: 5 * 1024 * 1024,
+
+        // Allow to upload PNG and JPG.
+        imageAllowedTypes: ['jpeg', 'jpg', 'png'],
+        events: {
+            'image.uploaded': function (response) {
+                // Response from server containing image URL
+                const imageURL = response.link;
+                // Insert uploaded image to the editor
+                this.image.insert(imageURL, false, { alt: 'Uploaded Image' });
+            }
+
+        }
+    }
+
+    $("#form__upload button").on("click", function (e) {
+        e.preventDefault();
+        const file = $("#form__upload input[type='file']").prop("files")[0];
+        uploadImage(file);
+    })
 });
