@@ -1,21 +1,6 @@
 {
   "news": [
     {
-      "id": "1",
-      "author": "VN Express",
-      "title": "HLV Troussier 'được hỗ trợ hơn 3 tháng lương'",
-      "shortDescription": "HÀ NỘI - Liên đoàn Bóng đá Việt Nam trả một khoản phí hỗ trợ tìm việc, sau khi đồng thuận chia tay HLV Phillippe Troussier trong cuộc họp hơn một tiếng rưỡi tối qua.",
-      "thumbnail": "https://i1-thethao.vnecdn.net/2024/03/27/z5287520988053-bc3ae8952b8c10c-2384-4053-1711512530.jpg?w=680&h=408&q=100&dpr=2&fit=crop&s=bcStzrDrAuJPU4mWZGoy8g",
-      "createAt": "27/03/2024",
-      "content": "HÀ NỘI - Liên đoàn Bóng đá Việt Nam trả một khoản phí hỗ trợ tìm việc, sau khi đồng thuận chia tay HLV Phillippe Troussier trong cuộc họp hơn một tiếng rưỡi tối qua. Theo kế hoạch, một ngày sau trận đấu với Indonesia ở lượt bốn vòng loại World Cup 2026, VFF và HLV Troussier mới ngồi lại để đánh giá về các vấn đề chuyên môn. Nhưng ngay sau trận đấu trên sân Mỹ Đình, VFF đã triệu tập cuộc họp khẩn tại trụ sở trên đường Lê Quang Đạo (Nam Từ Liêm), nằm đối diện sân Mỹ Đình. Thành phần tham dự gồm nhóm lãnh đạo VFF cùng HLV Troussier, bắt đầu từ gần 22h đến 23h30. Vấn đề được đặt ra xoay quanh tương lai của nhà cầm quân người Pháp.",
-      "source": "https://vnexpress.net/hlv-troussier-duoc-ho-tro-hon-3-thang-luong-4727157.html",
-      "category": [
-        "Sport",
-        "VietNam"
-      ],
-      "viewCount": 0
-    },
-    {
       "author": "Joel Khalili",
       "title": "What’s Behind the Bitcoin Price Surge? Vibes, Mostly",
       "shortDescription": "The price of bitcoin has climbed to a new all-time high. But assigning the cryptocurrency a value is anything but trivial.",
@@ -323,7 +308,7 @@
       "createAt": "2024-03-11T22:04:57Z",
       "content": "Both the Apple Vision Pro and the Meta Quest Pro represent the beginning of a new era for VR, AR, and MR hardware and experiences. Where other headsets like the Meta Quest 3, PS VR2, or Valve Index l… [+13742 chars]",
       "category": [
-        "lifestyle"
+        1
       ],
       "id": "oQHW4u1"
     },
@@ -336,7 +321,7 @@
       "createAt": "2024-03-14T19:38:30Z",
       "content": "The Duchess of Sussex has launched what appears to be a new lifestyle brand, American Riviera Orchard.\r\nThe surprise unveiling was made on Thursday with a new Instagram account and web page containin… [+1546 chars]",
       "category": [
-        "lifestyle"
+        1
       ],
       "id": "SmxSZSR"
     },
@@ -349,7 +334,7 @@
       "createAt": "2024-03-11T17:28:15Z",
       "content": "Not a real design for the Apple Car.Grafissimo/Getty, Apple, Tyler Le/BI\r\n<ul><li>Apple reportedly pulled the plug on its decade-long EV project last month.</li><li>Though we'll never see an Apple Ca… [+1910 chars]",
       "category": [
-        "lifestyle"
+        1
       ],
       "id": "wq-e6SR"
     },
@@ -362,7 +347,7 @@
       "createAt": "2024-03-14T19:48:12Z",
       "content": "Meghan Markle in Düsseldorf, Germany, on September 6, 2022.Samir Hussein/WireImage\r\n<ul><li>Meghan Markle has launched a new website and Instagram page called American Riviera Orchard.</li><li>Fans s… [+1753 chars]",
       "category": [
-        "lifestyle"
+        1
       ],
       "id": "CrBQwdX"
     },
@@ -375,7 +360,7 @@
       "createAt": "2024-03-20T13:00:01Z",
       "content": "With little competition, I’ve met the cutest Phil out there! He’s fun, creative, and smart only Phil isn’t a human. It’s an outdoor kitchen designed by Gordon Guillaumier in collaboration with Ethimo… [+1708 chars]",
       "category": [
-        "lifestyle"
+        1
       ],
       "id": "PL_WNru"
     },
@@ -388,7 +373,7 @@
       "createAt": "2024-03-04T08:43:36Z",
       "content": "Russian President Vladimir Putin.Contributor via Getty Images\r\n<ul><li>At his state-of-the-nation address on Thursday, Putin pledged plans to improve living standards in Russia.</li><li>That includes… [+2219 chars]",
       "category": [
-        "lifestyle"
+        1
       ],
       "id": "NVuQnrl"
     },
@@ -401,7 +386,7 @@
       "createAt": "2024-03-15T16:08:23Z",
       "content": "The internet is abuzz with theories about Meghan Markles brand new lifestyle company, American Riviera Orchard, which she announced the launch of on Thursday, Mar. 14. Per the companys trademark appl… [+1065 chars]",
       "category": [
-        "lifestyle"
+        1
       ],
       "id": "GdIgD0l"
     },
@@ -414,7 +399,7 @@
       "createAt": "2024-03-12T01:51:22Z",
       "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 241 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]",
       "category": [
-        "lifestyle"
+        1
       ],
       "id": "awQfkBq"
     },
@@ -427,7 +412,7 @@
       "createAt": "2024-03-03T09:51:01Z",
       "content": "Alice Everdeen, 32, has now spent over a year traveling the country in her school bus. She works remotely, and has doubled her previous office job salary.Alice Everdeen\r\n<ul><li>Alice Everdeen left h… [+4922 chars]",
       "category": [
-        "lifestyle"
+        1
       ],
       "id": "URhPHH0"
     },
@@ -440,7 +425,7 @@
       "createAt": "2024-02-28T22:56:26Z",
       "content": "When self-confessed adrenaline junkie Nat Eddleston joined the fire service, it seemed like the perfect match, she told BBC Wales Live.\r\n The 38-year-old from Conwy said it felt like she was making a… [+1076 chars]",
       "category": [
-        "lifestyle"
+        1
       ],
       "id": "xVfBjfC"
     },
@@ -453,7 +438,7 @@
       "createAt": "2024-03-14T22:00:52Z",
       "content": "Media caption, Chioma Nnadi speaks to BBC News\r\nChioma Nnadi, by her own admission, \"has big shoes to fill\".\r\nThe new head of British Vogue is replacing Edward Enninful, who spent more than six years… [+6505 chars]",
       "category": [
-        "fashion"
+        2
       ],
       "id": "rwZu1B3"
     },
@@ -466,7 +451,7 @@
       "createAt": "2024-03-10T20:39:30Z",
       "content": "The fashion is as important as the films at the Oscars, and the stars are turning on the style on the red carpet ahead of Sunday's film awards in Hollywood.\r\nFormer High School Musical star Vanessa H… [+992 chars]",
       "category": [
-        "fashion"
+        2
       ],
       "id": "mzH8r14"
     },
@@ -479,7 +464,7 @@
       "createAt": "1970-01-01T00:00:00Z",
       "content": "[Removed]",
       "category": [
-        "fashion"
+        2
       ],
       "id": "vlrXNU1"
     },
@@ -492,7 +477,7 @@
       "createAt": "2024-02-26T17:31:03Z",
       "content": "<ul><li>The Galaxy Ring will be part of the Samsung Health ecosystem and is set to work seamlessly with the Galaxy Watch.</li><li>The battery size of the Galaxy Ring will vary based on its size, rang… [+2527 chars]",
       "category": [
-        "fashion"
+        2
       ],
       "id": "leTJzm8"
     },
@@ -505,7 +490,7 @@
       "createAt": "2024-03-11T13:59:19Z",
       "content": "Apple CEO Tim Cook.Jason Armond / Los Angeles Times via Getty Images\r\n<ul><li>A popular menswear blogger broke down some of the fashion highs and lows of the Oscars.</li><li>In the thread, Tim Cook's… [+1791 chars]",
       "category": [
-        "fashion"
+        2
       ],
       "id": "EwLjA09"
     },
@@ -518,7 +503,7 @@
       "createAt": "2024-03-03T11:14:43Z",
       "content": "\"The New Look,\" Apple TV+'s new historical drama about the lives of France's leading mid-century fashion designers, offers a take on Coco Chanel that's never been committed to screen before.\r\nPreviou… [+6888 chars]",
       "category": [
-        "fashion"
+        2
       ],
       "id": "Ovp0p9c"
     },
@@ -531,7 +516,7 @@
       "createAt": "2024-03-18T11:00:00Z",
       "content": "Don't be fooled, National Geographic's new series Photographer isn't about analyzing images. Talk of lighting, depth of field, and good angles is minimal. Instead, it's an examination of what compels… [+1300 chars]",
       "category": [
-        "fashion"
+        2
       ],
       "id": "DErOOTg"
     },
@@ -544,7 +529,7 @@
       "createAt": "2024-03-12T19:32:13Z",
       "content": "It's time to get to know Eve Jobs.\r\nWhile the 25-year-old is widely known around the world as the daughter of late Apple cofounder Steve Jobs, she's also made a splash as a successful model.\r\nMost re… [+1853 chars]",
       "category": [
-        "fashion"
+        2
       ],
       "id": "PZ2d9eS"
     },
@@ -557,7 +542,7 @@
       "createAt": "2024-02-26T16:20:06Z",
       "content": "Artificial intelligence looks poised to change fashion at blistering speed. A 2023 report from the management consultant McKinsey &amp; Company estimated that generative AI could add up to $275 billi… [+6246 chars]",
       "category": [
-        "fashion"
+        2
       ],
       "id": "fdNnYiR"
     },
@@ -570,7 +555,7 @@
       "createAt": "2024-03-21T09:30:54Z",
       "content": "Lewis Hamilton says there is \"no transparency and no accountability\" in Formula 1 as the sport continues to be rocked by off-track wrangles.\r\nThe seven-time champion appeared to conflate controversie… [+3332 chars]",
       "category": [
-        "sport"
+        3
       ],
       "id": "d8zV91a"
     },
@@ -583,7 +568,7 @@
       "createAt": "2024-03-04T22:00:12Z",
       "content": "UK Sport and UK Athletics are planning to bid to host the 2029 World Championships.\r\nLondon, and the UK, last hosted the event in 2017.\r\nA feasibility study needs to take place but BBC Sport has been… [+2034 chars]",
       "category": [
-        "sport"
+        3
       ],
       "id": "29eOtAY"
     },
@@ -596,7 +581,7 @@
       "createAt": "2024-03-26T06:11:05Z",
       "content": "\"When I found out I was pregnant instantly the fingers started going to work out how long I had until the Olympics.\" \r\nThe date on most Olympians' minds is 26 July - exactly four months from now, whe… [+4392 chars]",
       "category": [
-        "sport"
+        3
       ],
       "id": "er_bltQ"
     },
@@ -609,7 +594,7 @@
       "createAt": "2024-03-05T15:26:02Z",
       "content": "Two-time Grand Slam champion Simona Halep's four-year ban for doping has been reduced to nine months by the Court of Arbitration for Sport.\r\nThe decision means former world number one Halep can retur… [+135 chars]",
       "category": [
-        "sport"
+        3
       ],
       "id": "4S70Map"
     },
@@ -622,7 +607,7 @@
       "createAt": "2024-03-06T15:31:35Z",
       "content": "Dharamsala is this week's venue and judging from the England players' social media, it looks like an absolute stunner. \r\nI was lucky enough to visit Newlands in Cape Town last year and both are surel… [+419 chars]",
       "category": [
-        "sport"
+        3
       ],
       "id": "DDGy9lu"
     },
@@ -635,22 +620,9 @@
       "createAt": "2024-03-04T16:13:20Z",
       "content": "Mohammed Ben Sulayem, president of motorsport's governing body the FIA, is under investigation for allegedly interfering over a Formula 1 race result.\r\nA whistleblower has told the FIA that Ben Sulay… [+1495 chars]",
       "category": [
-        "sport"
+        3
       ],
       "id": "p8WshdT"
-    },
-    {
-      "author": "Oliver Haslam",
-      "title": "Save $60 on Google Pixel Buds Pro During Amazon's Limited-Time Big Spring Sale - CNET",
-      "shortDescription": "Google's popular Pixel Buds Pro sport noise cancelation features and more for just $140 right now.",
-      "source": "https://www.cnet.com/deals/save-60-on-google-pixel-buds-pro-during-amazons-limited-time-big-spring-sale/",
-      "thumbnail": "https://www.cnet.com/a/img/resize/738a3bd48c2ab0cf5d75c12c99e45ae7c8dacd52/hub/2023/11/14/0ec16a01-62af-4e8c-a675-450cd65f525f/google-pixel-buds-pro.jpg?auto=webp&fit=crop&height=675&width=1200",
-      "createAt": "2024-03-20T12:00:34Z",
-      "content": "Buying a new pair of wireless earbuds can be expensive, especially if you want to get some of the best around. But with Amazon's Big Spring Sale now underway, this is definitely the time to treat you… [+1536 chars]",
-      "category": [
-        "sport"
-      ],
-      "id": "0iUVY4M"
     },
     {
       "author": null,
@@ -661,7 +633,7 @@
       "createAt": "2024-03-18T14:34:55Z",
       "content": "Nottingham Forest have been docked four points for breaching Premier League profit and sustainability rules, BBC Sport understands.\r\nThe immediate loss of points means Forest drop into the relegation… [+257 chars]",
       "category": [
-        "sport"
+        3
       ],
       "id": "ef30rJo"
     },
@@ -674,7 +646,7 @@
       "createAt": "2024-03-05T00:00:48Z",
       "content": "Meier is back from leading his Girona group run now and is busy making a drink. \r\nWe're supposed to be discussing his running career but instead we're talking coffee.\r\nThe brew is delicious. It illus… [+4037 chars]",
       "category": [
-        "sport"
+        3
       ],
       "id": "jPKBahP"
     },
@@ -687,7 +659,7 @@
       "createAt": "2024-03-08T06:54:29Z",
       "content": "Two Football Focus heavyweights slug it out in the ring ahead of Sunday's big game, with former Liverpool left-back Stephen Warnock in the red corner and former Man City centre-back Nedum Onuoha in t… [+242 chars]",
       "category": [
-        "sport"
+        3
       ],
       "id": "csTJtO7"
     },
@@ -700,7 +672,7 @@
       "createAt": "2024-02-29T17:00:00Z",
       "content": "Google was forced to turn off the image-generation capabilities of its latest AI model, Gemini, last week after complaints that it defaulted to depicting women and people of color when asked to creat… [+3844 chars]",
       "category": [
-        "technology"
+        4
       ],
       "id": "m9iDVFm"
     },
@@ -713,7 +685,7 @@
       "createAt": "2024-03-20T03:45:09Z",
       "content": "There is an insidious irony to climate change: as it gets hotter, more and more people are cranking up their air conditioners, which in turn contributes to global warming. Air conditioner (AC) sales … [+3114 chars]",
       "category": [
-        "technology"
+        4
       ],
       "id": "2ixsH-i"
     },
@@ -726,7 +698,7 @@
       "createAt": "2024-03-18T09:30:34Z",
       "content": "Apples AI ambitions could include Google or OpenAI\r\nApples AI ambitions could include Google or OpenAI\r\n / The iPhone-maker is in active talks to bring Gemini to the iPhone, and has also considered u… [+2452 chars]",
       "category": [
-        "technology"
+        4
       ],
       "id": "ZCnzCNv"
     },
@@ -739,7 +711,7 @@
       "createAt": "2024-03-08T18:22:00Z",
       "content": "In January 2014, a meteor entered Earths atmosphere in the Western Pacific, as evidenced by apparent vibrational signatures of the event in a seismic station in Papua New Guinea. Last year, scientist… [+3648 chars]",
       "category": [
-        "technology"
+        4
       ],
       "id": "r8DsoQ0"
     },
@@ -752,7 +724,7 @@
       "createAt": "1970-01-01T00:00:00Z",
       "content": "[Removed]",
       "category": [
-        "technology"
+        4
       ],
       "id": "eeuHJJq"
     },
@@ -765,7 +737,7 @@
       "createAt": "2024-03-12T13:58:57Z",
       "content": "Apple has begun testing a new AI-powered tool with a small group of advertisers that automatically decides where to place ads on the App Store, Business Insider reports.\r\nCiting two individuals famil… [+1106 chars]",
       "category": [
-        "technology"
+        4
       ],
       "id": "dcevqP2"
     },
@@ -778,7 +750,7 @@
       "createAt": "1970-01-01T00:00:00Z",
       "content": "[Removed]",
       "category": [
-        "technology"
+        4
       ],
       "id": "_puV5RD"
     },
@@ -791,7 +763,7 @@
       "createAt": "1970-01-01T00:00:00Z",
       "content": "[Removed]",
       "category": [
-        "technology"
+        4
       ],
       "id": "qFEwmEF"
     },
@@ -804,7 +776,7 @@
       "createAt": "2024-03-05T15:50:00Z",
       "content": "If youve ever wondered what quantum computers actually do, youre not alone. The truth is, no one knows what modern problems this technology can solve. Google launched a multi-year, global competition… [+2244 chars]",
       "category": [
-        "technology"
+        4
       ],
       "id": "V74deuQ"
     },
@@ -813,7 +785,9 @@
       "title": "Iran Smuggles Arms to West Bank, Officials Say, to Foment Unrest With Israel",
       "source": "https://www.nytimes.com/2024/04/09/world/middleeast/iran-west-bank-weapons-smuggling.html",
       "thumbnail": "https://static01.nyt.com/images/2024/03/26/multimedia/29iran-westbank-top/26mideast-crisis-syria-strikes-chmg-superJumbo.jpg",
-      "category[]": "sport",
+      "category": [
+        3
+      ],
       "shortDescription": "The covert operation, described by U.S., Iranian and Israeli officials, is heightening concerns that Iran is seeking to turn the West Bank into a flashpoint in its shadow war with Israel.",
       "content": "<div style='margin: 0px; padding: 0px; border: 0px; text-size-adjust: 100%; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-alternates: inherit; font-variant-position: inherit; font-weight: 400; font-stretch: inherit; font-size: 16px; line-height: inherit; font-family: \"Times New Roman\"; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; vertical-align: baseline; color: rgb(51, 51, 51); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;' id=\"isPasted\"><h1 data-testid=\"headline\" style='margin: 0px auto 0.5rem; padding: 0px; border: 0px; text-size-adjust: 100%; font-style: italic; font-variant: inherit; font-weight: 700; font-stretch: inherit; font-size: 2.5rem; line-height: 2.875rem; font-family: nyt-cheltenham, georgia, \"times new roman\", times, serif; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; vertical-align: baseline; color: var(--color-content-primary,#121212); text-align: left; width: 600px; max-width: none; position: relative;'>Iran Smuggles Arms to West Bank, Officials Say, to Foment Unrest With Israel</h1></div>",
       "createdAt": "2024-04-09T15:57:28.228Z",
@@ -843,9 +817,21 @@
     }
   ],
   "categories": [
-    "lifestyle",
-    "fashion",
-    "sport",
-    "technology"
+    {
+      "id": 1,
+      "name": "lifestyle"
+    },
+    {
+      "id": 2,
+      "name": "fashion"
+    },
+    {
+      "id": 3,
+      "name": "sports"
+    },
+    {
+      "id": 4,
+      "name": "technology"
+    }
   ]
 }
