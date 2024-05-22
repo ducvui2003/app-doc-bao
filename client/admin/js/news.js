@@ -1,18 +1,16 @@
-import uploadImage from "./uploadImage.js";
+import { CATEGORIES, NEWS } from "./const.js";
+import { News } from "./type.js";
+import { formatDate } from "./utils.js";
+$(".nav-item.dropdown").on("click", function () {
+  $(".dropdown-menu").toggleClass("show");
+  $(".nav-link.dropdown-toggle").toggleClass("show");
+});
+
 $(document).ready(function () {
-  const URL = "http://localhost:3000/news";
-  function formatDate(dateString) {
-    var formattedDate = new Date(dateString).toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    });
-    return formattedDate;
-  }
   // Load data table first
   $("#data").DataTable({
     ajax: {
-      url: URL,
+      url: NEWS,
       dataSrc: "",
     },
     columnDefs: [
@@ -78,7 +76,7 @@ $(document).ready(function () {
 
     modalCreate.find("#btn__delete").click(function () {
       $.ajax({
-        url: `${URL}/${idDelete}`,
+        url: `${NEWS}/${idDelete}`,
         method: "DELETE",
         success: function () {
           modalDelete.hide();
@@ -92,7 +90,7 @@ $(document).ready(function () {
     const modalUpdate = $("#modal__edit");
     modalUpdate.find(".btn__modal-delete").click(function () {
       $.ajax({
-        url: `${URL}/${idDelete}`,
+        url: `${NEWS}/${idDelete}`,
         method: "DELETE",
         success: function () {
           modalDelete.hide();
@@ -106,7 +104,7 @@ $(document).ready(function () {
     const modelDelete = $("#modal__delete");
     modelDelete.find(".btn__modal-delete").click(function () {
       $.ajax({
-        url: `${URL}/${idDelete}`,
+        url: `${NEWS}/${idDelete}`,
         method: "DELETE",
         success: function () {
           modelDelete.hide();
@@ -137,9 +135,10 @@ $(document).ready(function () {
         },
       },
     });
+    // Lấy thể loại
     const selectCategory = `${formSelector} .select__category`;
     $.ajax({
-      url: "http://localhost:3000/categories",
+      url: CATEGORIES,
       type: "GET",
       success: function (data) {
         const selectOptions = data.map((item) => ({
@@ -240,22 +239,19 @@ $(document).ready(function () {
         $(element).next().text("");
       },
       submitHandler: function (form) {
-        // Submit form via AJAX
-        var formData = new FormData(form);
-
-        var jsonData = {};
+        const formData = new FormData(form);
+        const jsonData = new News();
         formData.forEach(function (value, key) {
           jsonData[key] = value;
         });
         jsonData.createdAt = new Date().toISOString();
         console.log(jsonData);
         $.ajax({
-          url: "http://localhost:3000/news",
+          url: NEWS,
           type: "POST",
           data: JSON.stringify(jsonData),
           contentType: "application/json",
           success: function (response) {
-            console.log(response);
             Swal.fire({
               title: "Success!",
               text: "News has been added successfully!",
@@ -282,36 +278,36 @@ $(document).ready(function () {
       },
     });
   }
-  const configFroala = {
-    imageUploadParam: "image_param",
+  // const configFroala = {
+  //   imageUploadParam: "image_param",
 
-    // Set the image upload URL.
-    imageUploadURL: "/",
+  //   // Set the image upload URL.
+  //   imageUploadURL: "/",
 
-    // Additional upload params.
-    imageUploadParams: { id: "my_editor" },
+  //   // Additional upload params.
+  //   imageUploadParams: { id: "my_editor" },
 
-    // Set request type.
-    imageUploadMethod: "POST",
+  //   // Set request type.
+  //   imageUploadMethod: "POST",
 
-    // Set max image size to 5MB.
-    imageMaxSize: 5 * 1024 * 1024,
+  //   // Set max image size to 5MB.
+  //   imageMaxSize: 5 * 1024 * 1024,
 
-    // Allow to upload PNG and JPG.
-    imageAllowedTypes: ["jpeg", "jpg", "png"],
-    events: {
-      "image.uploaded": function (response) {
-        // Response from server containing image URL
-        const imageURL = response.link;
-        // Insert uploaded image to the editor
-        this.image.insert(imageURL, false, { alt: "Uploaded Image" });
-      },
-    },
-  };
+  //   // Allow to upload PNG and JPG.
+  //   imageAllowedTypes: ["jpeg", "jpg", "png"],
+  //   events: {
+  //     "image.uploaded": function (response) {
+  //       // Response from server containing image URL
+  //       const imageURL = response.link;
+  //       // Insert uploaded image to the editor
+  //       this.image.insert(imageURL, false, { alt: "Uploaded Image" });
+  //     },
+  //   },
+  // };
 
-  $("#form__upload button").on("click", function (e) {
-    e.preventDefault();
-    const file = $("#form__upload input[type='file']").prop("files")[0];
-    uploadImage(file);
-  });
+  // $("#form__upload button").on("click", function (e) {
+  //   e.preventDefault();
+  //   const file = $("#form__upload input[type='file']").prop("files")[0];
+  //   uploadImage(file);
+  // });
 });

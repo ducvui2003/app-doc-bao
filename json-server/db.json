@@ -10,7 +10,7 @@
       "content": "The latest surge in the price of bitcoin is increasing the clamor around it, says Dal Bianco, drawing in yet more speculators and creating a self-reinforcing cycle. Likewise, when collective confiden… [+2967 chars]",
       "id": "WAhgSDs",
       "category": [
-        "Bitcoin"
+        5
       ],
       "viewCount": 0
     },
@@ -24,7 +24,7 @@
       "content": "A former takeaway worker found with Bitcoin worth more than £2bn has been convicted at Southwark Crown Court of a crime linked to money laundering.\r\nJian Wen, 42, from Hendon in north London, was inv… [+2779 chars]",
       "id": "LuL2O8e",
       "category": [
-        "Bitcoin"
+        1
       ],
       "viewCount": 0
     },
@@ -38,7 +38,7 @@
       "content": "20\r\nBitcoin's price hit a record high Tuesday, surging above $69,000 and notching past its prior peak price of $68,991.85 recorded in 2021.\r\nAfter bitcoin's price sunk in 2022 amid a cryptocurrency i… [+4343 chars]",
       "id": "9dQArJ2",
       "category": [
-        "Bitcoin"
+        5
       ],
       "viewCount": 0
     },
@@ -52,7 +52,7 @@
       "content": "19\r\nA US federal jury has convicted a dual Russian-Swedish national, Roman Sterlingov, for operating Bitcoin Fog, \"the longest-running bitcoin money laundering service on the darknet,\" the Department… [+5682 chars]",
       "id": "TTmzpjT",
       "category": [
-        "Bitcoin"
+        5
       ],
       "viewCount": 0
     },
@@ -66,7 +66,7 @@
       "content": "Bitcoin hit a record high following a rally sparked by the Securities and Exchange Commission's approval of bitcoin exchange-traded funds.\r\nDan Kitwood/Getty Images\r\nBitcoin is trading at a new all-t… [+5142 chars]",
       "id": "37VCtHU",
       "category": [
-        "Bitcoin"
+        5
       ],
       "viewCount": 0
     },
@@ -80,7 +80,7 @@
       "content": "Japan’s Government Pension Investment Fund (GPIF) is considering Bitcoin (BTC) as a potential investment diversification tool amidst economic and technological changes.\r\nAccording to a Mar. 19 announ… [+2534 chars]",
       "id": "AEuIzOT",
       "category": [
-        "Bitcoin"
+        5
       ],
       "viewCount": 0
     },
@@ -94,7 +94,7 @@
       "content": "Despite reaching record highs of almost $74,000 on Thursday (March 14), the price of Bitcoin (BTC) dropped by 9% early on Friday (March 15) to $66, 885.\r\nMany cryptocurrency traders will likely sell … [+2274 chars]",
       "id": "erJS2FA",
       "category": [
-        "Bitcoin"
+        5
       ],
       "viewCount": 0
     },
@@ -108,7 +108,7 @@
       "content": "President Nayib Bukele said El Salvador won't sell its bitcoin investment.\r\nEmerson Flores/APHOTOGRAFIA/Getty Images\r\nEl Salvador is up big on its bitcoin bet, according to its millennial president N… [+2026 chars]",
       "id": "YlPLHar",
       "category": [
-        "Bitcoin"
+        5
       ],
       "viewCount": 0
     },
@@ -122,7 +122,7 @@
       "content": "Bitcoin is in the midst of a prolonged rebound back to levels last seen when interest rates were near zero and pixelated artwork was regularly selling for millions. \r\nOn Monday, bitcoin spiked more t… [+3350 chars]",
       "id": "wlj-dHp",
       "category": [
-        "Bitcoin"
+        5
       ],
       "viewCount": 0
     },
@@ -832,6 +832,10 @@
     {
       "id": 4,
       "name": "technology"
+    },
+    {
+      "id": 5,
+      "name": "Bitcoin"
     }
   ]
 }
