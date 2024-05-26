@@ -1,4 +1,4 @@
-export class News {
+class News {
   constructor(title, author, source, shortDescription, content, thumbnail) {
     this.title = title;
     this.author = author;
@@ -14,8 +14,9 @@ export class News {
   }
 }
 
-export class Category {
+class Category {
   constructor(id) {
     this.id = id;
   }
 }
+export { News, Category };
