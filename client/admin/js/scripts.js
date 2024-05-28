@@ -57,9 +57,9 @@ $(document).ready(function () {
     },
   });
   function handleOpenForm() {
-    // 1. Click "create"
+    // 1.1.1 Click "create"
     $("#btn__create").on("click", function () {
-      // 2 setupForm()
+      // 1.1.2 setupForm()
       setupForm();
     });
   }
@@ -67,9 +67,9 @@ $(document).ready(function () {
   const setupForm = () => {
     const selectCategory = formCreate.find(`select[name="category[]"]`)[0];
 
-    //3. getCategories()
+    //1.1.3 getCategories()
     getCategories().then((data) => {
-      // 4. setCategories()
+      // 1.1.5 setCategories()
       $(selectCategory).selectize({
         plugins: ["restore_on_backspace", "clear_button"],
         delimiter: " - ",
@@ -81,9 +81,9 @@ $(document).ready(function () {
         searchField: "text",
       });
     });
-    // 5. configTextEditor()
+    // 1.1.6 configTextEditor()
     configTextEditor();
-    // 6. createForm()
+    // 1.1.7 createForm()
     validate();
   };
 
@@ -116,7 +116,7 @@ $(document).ready(function () {
     $(formCreate).on("submit", function (e) {
       e.preventDefault();
     });
-    // 8. validate() + //9, showError()
+    // 1.1.10 validate() + //1.1.11 showError()
     formCreate.validate({
       rules: {
         author: {
@@ -196,9 +196,8 @@ $(document).ready(function () {
           .removeAttr("required");
         $(element).next().text("");
       },
-      // 10 submitForm())
+      // 1.1.12 submitForm())
       submitHandler: function (form) {
-        //11 handleSubmit()
         handleSubmit(form);
       },
     });
@@ -214,9 +213,11 @@ $(document).ready(function () {
       } else news[key] = value;
     });
     news.createdAt = new Date().toISOString();
-    // 12 titleExist
+    // 1.1.13 titleExist
     titleExist().then((data) => {
+      //1.2.1 return news not exist
       if (data.length > 0) {
+        //1.2.2 notify news title is exist
         Swal.fire({
           title: "Failed!",
           text: "Title already exists!",
@@ -224,7 +225,8 @@ $(document).ready(function () {
           confirmButtonText: "OK",
         });
       } else {
-        // 13 addNews()
+        //1.1.14 return news not exist
+        //1.1.15 addNews()
         addNews(news);
       }
     });
@@ -237,7 +239,7 @@ $(document).ready(function () {
       data: JSON.stringify(news),
       contentType: "application/json",
       success: function () {
-        // 14. Show Notify
+        //1.1.16 notify create news success
         Swal.fire({
           title: "Success!",
           text: "News has been added successfully!",
