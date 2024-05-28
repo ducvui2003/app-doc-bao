@@ -39,6 +39,7 @@ import getLinkNewsDetail from "../detail/href.js";
                 console.log(element);
                 const {id, thumbnail, title, source, author, shortDescription } = arrayNews[index];
                 $(element).find('.news__thumbnail').attr('src', thumbnail);
+
                 $(element).find('.news__link').attr('href', getLinkNewsDetail(id));
                 $(element).find('.news__title').text(title);
                 $(element).find('.news__author').text(author);
