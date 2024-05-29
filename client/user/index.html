@@ -560,6 +560,22 @@
     <!-- Search model end -->
 
     <!-- JS here -->
+    <script>
+        $(document).ready(function () {
+    $('#search-form').on('submit', function (event) {
+        event.preventDefault(); // Ngăn chặn form gửi mặc định
+
+        const query = $('#search-input').val().trim();
+
+        if (query.length > 2) { // Thực hiện tìm kiếm khi từ khóa có độ dài lớn hơn 2 ký tự
+            // Chuyển hướng tới trang category.html với query là tham số
+            window.location.href = `http://127.0.0.1:5500/app-doc-bao/client/user/category.html?search=${encodeURIComponent(query)}`;
+        } else {
+            alert('Please enter at least 3 characters for search.');
+        }
+    });
+});
+</script>
 
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
