@@ -550,33 +550,31 @@
     <div class="search-model-box">
         <div class="d-flex align-items-center h-100 justify-content-center">
             <div class="search-close-btn">+</div>
-            <form class="search-model-form">
-                <input type="text"
-                    id="search-input"
-                    placeholder="Searching key.....">
+            <form class="search-model-form" id="search-form">
+                <input type="text" id="search-input" placeholder="Searching key.....">
+                <button type="submit">Search</button>
             </form>
         </div>
     </div>
     <!-- Search model end -->
 
     <!-- JS here -->
+
     <script>
-        $(document).ready(function () {
-    $('#search-form').on('submit', function (event) {
-        event.preventDefault(); // Ngăn chặn form gửi mặc định
+            $(document).ready(function () {
+        $('#search-form').on('submit', function (event) {
+            event.preventDefault(); // Ngăn chặn form gửi mặc định
 
-        const query = $('#search-input').val().trim();
+            const query = $('#search-input').val().trim();
 
-        if (query.length > 2) { // Thực hiện tìm kiếm khi từ khóa có độ dài lớn hơn 2 ký tự
-            // Chuyển hướng tới trang category.html với query là tham số
-            window.location.href = `http://127.0.0.1:5500/app-doc-bao/client/user/category.html?search=${encodeURIComponent(query)}`;
-        } else {
-            alert('Please enter at least 3 characters for search.');
-        }
+            if (query.length > 2) { 
+                window.location.href = `http://127.0.0.1:5500/client/user/category.html?search=${encodeURIComponent(query)}`;
+            } else {
+                alert('Please enter at least 3 characters for search.');
+            }
+        });
     });
-});
-</script>
-
+    </script>
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
 
