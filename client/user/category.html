@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-    
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -162,7 +163,7 @@
                                 </div>
                             </div>
                             <!-- Tab content -->
-                            <div class="row">
+                            <div class="row" id = "isData" style="display: block;">
                                 <div class="col-12">
                                     <!-- Nav Card -->
                                     <div class="tab-content" id="nav-tabContent">
@@ -585,6 +586,9 @@
                                 <!-- End Nav Card -->
                                 </div>
                             </div>
+                            <div class="row" id="callApi" style="display: none;">
+
+                            </div>
                     </div>
                     </div>
                     <div class="col-lg-4">
@@ -761,92 +765,93 @@
 </footer>
 <!-- Search model Begin -->
 <div class="search-model-box">
-    <div class="d-flex align-items-center h-100 justify-content-center">
-        <div class="search-close-btn">+</div>
-        <form class="search-model-form">
-            <input type="text" id="search-input" placeholder="Searching key.....">
-        </form>
-    </div>
+        <div class="d-flex align-items-center h-100 justify-content-center">
+            <div class="search-close-btn">+</div>
+            <form class="search-model-form" id="search-form">
+                <input type="text" id="search-input" placeholder="Searching key.....">
+                <button type="submit">Search</button>
+            </form>
+        </div>
 </div>
 <!-- Search model end -->
 
 <!-- JS here -->
-<script>
-    $(document).ready(function () {
-$('#search-form').on('submit', function (event) {
-   event.preventDefault(); // Ngăn chặn form gửi mặc định
+    <script>
+             $(document).ready(function () {
+        $('#search-form').on('submit', function (event) {
+            event.preventDefault(); // Ngăn chặn form gửi mặc định
 
-   const query = $('#search-input').val().trim();
+            const query = $('#search-input').val().trim();
 
-   if (query.length > 2) { // Thực hiện tìm kiếm khi từ khóa có độ dài lớn hơn 2 ký tự
-       // Chuyển hướng tới trang category.html với query là tham số
-       window.location.href = `http://127.0.0.1:5500/app-doc-bao/client/user/category.html?search=${encodeURIComponent(query)}`;
-   } else {
-       alert('Please enter at least 3 characters for search.');
-   }
-});
-});
-$(document).ready(function () {
-const urlParams = new URLSearchParams(window.location.search);
-const isHidden = document.getElementById("isData")
-const query = urlParams.get('search');
+            if (query.length > 2) { // Thực hiện tìm kiếm khi từ khóa có độ dài lớn hơn 2 ký tự
+                // Chuyển hướng tới trang category.html với query là tham số
+                window.location.href = `http://127.0.0.1:5500/client/user/category.html?search=${encodeURIComponent(query)}`;
+            } else {
+                alert('Please enter at least 3 characters for search.');
+            }
+        });
+    });
+        $(document).ready(function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const isHidden = document.getElementById("isData")
+        const query = urlParams.get('search');
 
-if (query) {
-   $.ajax({
-       url: 'http://localhost:3000/news',
-       type: 'GET',
-       data: {
-           title_like: query
-       },
-       success: function (data) {
-           document.getElementById("isData").style.display = "none";
-           displayResults(data)
-           console.log("🚀 ~ data:", data)
+        if (query) {
+            $.ajax({
+                url: 'http://localhost:3000/news',
+                type: 'GET',
+                data: {
+                    title_like: query
+                },
+                success: function (data) {
+                    document.getElementById("isData").style.display = "none";
+                    displayResults(data)
+                    console.log("🚀 ~ data:", data)
 
-       },
-       error: function (error) {
-           console.error('There was an error fetching the data:', error);
-       }
-   });
-}
+                },
+                error: function (error) {
+                    console.error('There was an error fetching the data:', error);
+                }
+            });
+        }
 
-function displayResults(data) {
-       let results = '';
-       data.forEach((item, index) => {
-           if (index % 2 === 0) {
-               results += `<div class="row">`;
-           }
+        function displayResults(data) {
+                let results = '';
+                data.forEach((item, index) => {
+                    if (index % 2 === 0) {
+                        results += `<div class="row">`;
+                    }
 
-           results += `
-               <div class="col-xl-6 col-lg-6 col-md-6">
-                   <div class="whats-news-single mb-40 mb-40">
-                       <div class="whates-img">
-                           <img src="${item.thumbnail}" alt="">
-                       </div>
-                       <div class="whates-caption whates-caption2">
-                           <h4><a href="${item.source}">${item.title}</a></h4>
-                           <span>by ${item.author} - ${new Date(item.createAt).toLocaleDateString()}</span>
-                           <p>${item.shortDescription}</p>
-                       </div>
-                   </div>
-               </div>
-           `;
+                    results += `
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="whats-news-single mb-40 mb-40">
+                                <div class="whates-img">
+                                    <img src="${item.thumbnail}" alt="">
+                                </div>
+                                <div class="whates-caption whates-caption2">
+                                    <h4><a href="${item.source}">${item.title}</a></h4>
+                                    <span>by ${item.author} - ${new Date(item.createAt).toLocaleDateString()}</span>
+                                    <p>${item.shortDescription}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
 
-           if (index % 2 === 1) {
-               results += `</div>`;
-           }
-       });
+                    if (index % 2 === 1) {
+                        results += `</div>`;
+                    }
+                });
 
-       if (data.length % 2 !== 0) {
-           results += `</div>`;
-       }
-       document.getElementById("callApi").style.display = "block";
+                if (data.length % 2 !== 0) {
+                    results += `</div>`;
+                }
+                document.getElementById("callApi").style.display = "block";
 
-       $('#callApi').html(results);
-   }
-});
+                $('#callApi').html(results);
+            }
+    });
 
-</script>
+    </script>
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
